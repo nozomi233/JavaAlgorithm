@@ -10,7 +10,7 @@ public class Code04_BSExist {
 		int R = sortedArr.length - 1;
 		int mid = 0;
 		// L..R
-		while (L < R) {
+		while (L <= R) {
 			mid = L + ((R - L) >> 1); // mid = (L + R) / 2
 			if (sortedArr[mid] == num) {
 				return true;
