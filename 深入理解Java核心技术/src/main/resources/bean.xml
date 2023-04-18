@@ -1,6 +1,0 @@
-<xml>
-    <bean id = "student" class = "com.zhulang.chapter11.Student">
-        <property name = "name">Hollis</property>
-        <property name = "gender">male</property>
-    </bean>
-</xml>
