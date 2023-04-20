@@ -14,7 +14,7 @@ public class BSExist {
         int L = 0;
         int R = sortedArr.length - 1;
         int mid = 0;
-        while (L < R){
+        while (L <= R){
             mid = L + ((R - L) >> 1);
             if (sortedArr[mid] < num){
                 L = mid + 1;

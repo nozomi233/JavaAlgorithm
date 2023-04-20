@@ -7,6 +7,11 @@ import java.util.Arrays;
  * @Date 2023-04-07
  **/
 public class BaseSort {
+
+    /**
+     * 两个稳定O(n^2)排序中,插入比冒泡更受欢迎，常数更小
+     */
+
     public static void selectSort(int[] arr){
         if (arr == null || arr.length < 2){
             return;
