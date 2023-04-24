@@ -3,9 +3,9 @@ package class08;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Code02_PrintAllSubsquences {
+public class Code02_PrintAllSubsequences {
 
-	public static void printAllSubsquence(String str) {
+	public static void printAllSubsequence(String str) {
 		char[] chs = str.toCharArray();
 		process(chs, 0);
 	}
