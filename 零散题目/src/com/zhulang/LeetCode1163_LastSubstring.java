@@ -23,5 +23,22 @@ public class LeetCode1163_LastSubstring {
             }
             return s.substring(i);
         }
+
+        /**
+         * 超时
+         * @param s
+         * @return
+         */
+
+        public static String lastSubstring2(String s) {
+            String max = s;
+            for (int i = s.length() - 1; i >= 0; i--){
+                String substring = s.substring(i);
+                if (max.compareTo(substring) < 0){
+                    max = substring;
+                }
+            }
+            return max;
+        }
     }
 }

@@ -3,6 +3,9 @@ package class08;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 这个方法返回的只是"看上去像"的字符串，因为str[i] = 0;这一行，ASCII表中0为空字符，但它也是个字符
+ */
 public class Code02_PrintAllSubsequences {
 
 	public static void printAllSubsequence(String str) {
