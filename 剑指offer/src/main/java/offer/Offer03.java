@@ -1,4 +1,4 @@
-package com.offer.zl;
+package offer;
 
 import java.util.*;
 
