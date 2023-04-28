@@ -1,4 +1,4 @@
-package offer2;
+package offer;
 
 /**
  * @Author zhulang

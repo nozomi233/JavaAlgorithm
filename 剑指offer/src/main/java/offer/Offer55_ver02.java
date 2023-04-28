@@ -1,4 +1,4 @@
-package offer2;
+package offer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +7,7 @@ import java.util.List;
  * @Author zhulang
  * @Date 2023-04-28
  **/
-public class Offer_ver02_55 {
+public class Offer55_ver02 {
     static class BSTIterator {
 
         private int i = 0;

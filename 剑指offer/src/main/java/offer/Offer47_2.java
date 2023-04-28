@@ -1,10 +1,10 @@
-package offer2;
+package offer;
 
 /**
  * @Author zhulang
  * @Date 2023-04-28
  **/
-public class Offer_ver02_47 {
+public class Offer47_2 {
     public TreeNode pruneTree(TreeNode root) {
         if (root == null) {
             return null;

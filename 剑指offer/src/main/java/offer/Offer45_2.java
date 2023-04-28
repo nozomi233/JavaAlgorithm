@@ -1,4 +1,4 @@
-package offer2;
+package offer;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -9,7 +9,7 @@ import java.util.Queue;
  * @Author zhulang
  * @Date 2023-04-28
  **/
-public class Offer_ver02_45 {
+public class Offer45_2 {
     public int findBottomLeftValue(TreeNode root) {
         List<List<TreeNode>> lists = new ArrayList<>();
         Queue<TreeNode> queue = new LinkedList();

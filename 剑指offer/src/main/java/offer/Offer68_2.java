@@ -1,4 +1,4 @@
-package offer2;
+package offer;
 
 import java.util.*;
 
@@ -6,7 +6,7 @@ import java.util.*;
  * @Author zhulang
  * @Date 2023-04-28
  **/
-public class Offer_ver02_68 {
+public class Offer68_2 {
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         if (root == null){
             return null;

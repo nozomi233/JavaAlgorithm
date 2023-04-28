@@ -19,7 +19,8 @@ public class Code08_SuccessorNode {
 		}
 		if (node.right != null) {
 			return getLeftMost(node.right);
-		} else { // 无右子树
+		} else {
+			// 无右子树，一直往上找，直到某节点是其父节点的左孩子，返回其父节点，即为这个无右子树节点的后继节点
 			Node parent = node.parent;
 			while (parent != null && parent.left != node) { // 当前节点是其父亲节点右孩子
 				node = parent;

@@ -1,4 +1,4 @@
-package offer2;
+package offer;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
  * @Author zhulang
  * @Date 2023-04-28
  **/
-public class Offer_ver02_46 {
+public class Offer46_2 {
     public List<Integer> rightSideView(TreeNode root) {
         if (root == null){
             return new ArrayList<>();
