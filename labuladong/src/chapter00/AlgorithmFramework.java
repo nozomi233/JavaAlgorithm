@@ -1,10 +1,14 @@
 package chapter00;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
+ * 算法框架
  * @Author zhulang
  * @Date 2023-04-27
  **/
-public class DataOpt {
+public class AlgorithmFramework {
     /**
      * 数组遍历框架，典型的线性迭代结构：
      * @param arr
@@ -62,5 +66,31 @@ public class DataOpt {
         }
     }
 
+    /**
+     * 路径列表
+     */
+    private final List<List<Integer>> pathList = new ArrayList<>();
+
+    /**
+     * 回溯算法框架
+     * @param path 路径
+     * @param choices 选择列表
+     */
+    void backtrack(List<Integer> path, List<Integer> choices){
+        // if 满足结束条件 ,假设做10次选择后结束
+        if (path.size() == 10){
+            pathList.add(path);
+            return;
+        }
+
+        // for 选择 in 选择列表
+        for (Integer choice : choices){
+            // 做选择
+            path.add(choice);
+            backtrack(path, choices);
+            // 撤销选择
+            path.remove(path.size() - 1);
+        }
+    }
 
 }
