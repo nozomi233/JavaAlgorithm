@@ -5,24 +5,6 @@ package main;
  * @Date 2023-04-18
  **/
 public class LeetCode1026_MaxAncestorDiff {
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
 
     public static class ReturnData {
         public int max;

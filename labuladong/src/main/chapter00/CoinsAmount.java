@@ -1,4 +1,4 @@
-package chapter00;
+package main.chapter00;
 
 /**
  * 递归方法--(从上至下，增加备忘录记录子问题解)-->备忘录方法--(找到初始值，从下至上记录解)-->DP
