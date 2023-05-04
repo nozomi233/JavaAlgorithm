@@ -10,6 +10,7 @@ public class Code04_BSExist {
 		int R = sortedArr.length - 1;
 		int mid = 0;
 		// L..R
+		// 这里while可以是<,因为最后判断了sortedArr[L] == num，打了补丁，否则while中要<=
 		while (L <= R) {
 			mid = L + ((R - L) >> 1); // mid = (L + R) / 2
 			if (sortedArr[mid] == num) {
@@ -21,6 +22,11 @@ public class Code04_BSExist {
 			}
 		}
 		return sortedArr[L] == num;
+	}
+
+	public static void main(String[] args) {
+		int[] sortedArr = new int[]{1,2,3,4,5};
+		System.out.println(exist(sortedArr, 5));
 	}
 
 

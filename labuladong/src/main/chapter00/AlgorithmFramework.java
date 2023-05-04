@@ -11,8 +11,6 @@ import java.util.*;
 public class AlgorithmFramework {
     /**
      * 数组遍历框架，典型的线性迭代结构：
-     *
-     * @param arr
      */
     void traverse(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
@@ -74,7 +72,7 @@ public class AlgorithmFramework {
     private final List<List<Integer>> pathList = new ArrayList<>();
 
     /**
-     * 回溯算法框架(dfs)
+     * dfs:回溯算法框架
      *
      * @param path    路径
      * @param choices 选择列表
@@ -97,7 +95,7 @@ public class AlgorithmFramework {
     }
 
     /**
-     * 计算从起点 start 到终点 target 的最近距离
+     * bfs:计算从起点 start 到终点 target 的最近距离
      *
      * @param start
      * @param target
@@ -139,6 +137,21 @@ public class AlgorithmFramework {
             step++;
         }
         return step;
+    }
+
+    int binarySearch(int[] nums, int target) {
+        int left = 0, right = nums.length - 1;
+        while (left <= right){
+            int mid = left + ((right - left) >> 1);
+            if (nums[mid] == target) {
+                return mid;
+            } else if (nums[mid] < target) {
+                left = mid + 1;
+            } else if (nums[mid] > target) {
+                right = mid - 1;
+            }
+        }
+        return -1;
     }
 
 
