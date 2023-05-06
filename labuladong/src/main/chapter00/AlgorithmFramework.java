@@ -154,5 +154,41 @@ public class AlgorithmFramework {
         return -1;
     }
 
+    /* 滑动窗口算法框架 */
+    void slidingWindow(String s, String t) {
+        HashMap<Character, Integer> need = new HashMap<>();
+        HashMap<Character, Integer> window = new HashMap<>();
+        char[] ts = t.toCharArray();
+        char[] ss = s.toCharArray();
+        for (Character c : ts) {
+            need.put(c, need.getOrDefault(c, 0) + 1);
+        }
+
+        int left = 0, right = 0;
+        int valid = 0;
+        while (right < ss.length) {
+            // c 是将移入窗口的字符
+            char c = ss[right];
+            // 右移窗口
+            right++;
+            // todo 进行窗口内数据的一系列更新
+
+            /*** debug 输出的位置 ***/
+            System.out.println("window:" + left +", " +  right);
+            /********************/
+
+            // todo 判断左侧窗口是否要收缩 window needs shrink
+            while (true) {
+                // todo 判断窗口是否符合要求，符合返回
+
+                // d 是将移出窗口的字符
+                char d = ss[left];
+                // 左移窗口
+                left++;
+                // todo 进行窗口内数据的一系列更新
+            }
+        }
+    }
+
 
 }
