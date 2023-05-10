@@ -60,7 +60,7 @@ public class CoinsAmount {
     public static void main(String[] args) {
         System.out.println(coinChangeRecur(new int[]{1, 2, 5}, 11));
         // 如有{1, 2, 5}三种硬币的话，对于dp[5]，为1 + min(d[4],d[3],d[0]);
-        // dp[1]，为1 + min(d[10],d[9],d[6])
+        // dp[11]，为1 + min(d[10],d[9],d[6])
         System.out.println(coinChangeDp(new int[]{1, 2, 5}, 11));
 
     }
