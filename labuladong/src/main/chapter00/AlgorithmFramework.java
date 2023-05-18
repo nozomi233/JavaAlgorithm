@@ -14,7 +14,7 @@ public class AlgorithmFramework {
      */
     void traverse(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
-            // 迭代访问 arr[i] } }
+            // 迭代访问 arr[i]
         }
     }
 
@@ -28,13 +28,13 @@ public class AlgorithmFramework {
 
     void traverse(ListNode head) {
         for (ListNode p = head; p != null; p = p.next) {
-            // 迭代访问 p.val } }
+            // 迭代访问 p.val
         }
     }
 
     void traverseRecur(ListNode head) {
         // 递归访问 head.val
-        // traverse(head.next)
+        // traverseRecur(head.next)
     }
 
 
