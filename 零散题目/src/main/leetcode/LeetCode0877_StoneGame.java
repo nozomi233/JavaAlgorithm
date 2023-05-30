@@ -12,7 +12,7 @@ public class LeetCode0877_StoneGame {
     public boolean stoneGame(int[] piles) {
         int my = firstHand(piles, 0, piles.length - 1);
         int sum = 0;
-        for (int i : piles){
+        for (int i : piles) {
             sum += i;
         }
         return my > (sum / 2);
@@ -22,21 +22,21 @@ public class LeetCode0877_StoneGame {
     public int stoneGame2(int[] piles) {
         int firstHand = firstHand(piles, 0, piles.length - 1);
         int sum = 0;
-        for (int i : piles){
+        for (int i : piles) {
             sum += i;
         }
         return 2 * firstHand - sum;
     }
 
-    public int secondHand(int[] piles, int start, int end){
-        if (start == end){
+    public int secondHand(int[] piles, int start, int end) {
+        if (start == end) {
             return 0;
         }
         return Math.min(firstHand(piles, start, end - 1), firstHand(piles, start + 1, end));
     }
 
-    public int firstHand(int[] piles, int start, int end){
-        if (start == end){
+    public int firstHand(int[] piles, int start, int end) {
+        if (start == end) {
             return piles[start];
         }
         return Math.max(piles[start] + secondHand(piles, start + 1, end), piles[end] + secondHand(piles, start, end - 1));
@@ -44,6 +44,7 @@ public class LeetCode0877_StoneGame {
 
     class Pair {
         int fir, sec;
+
         Pair(int fir, int sec) {
             this.fir = fir;
             this.sec = sec;
@@ -54,27 +55,27 @@ public class LeetCode0877_StoneGame {
         int n = piles.length;
         Pair[][] dp = new Pair[n][n];
 
-        for (int i = 0; i < n; i++){
-            for (int j = i; j < n; j++){
+        for (int i = 0; i < n; i++) {
+            for (int j = i; j < n; j++) {
                 dp[i][j] = new Pair(0, 0);
             }
         }
 
         // 填入base case
-        for (int i = 0; i < n; i++){
+        for (int i = 0; i < n; i++) {
             dp[i][i].fir = piles[i];
             dp[i][i].sec = 0;
         }
 
         // todo zl 斜着遍历数组，有问题，有空研究下
-        for (int l = 2; l <= n; l++){
-            for (int i = 0; i <= n - 1; i++){
+        for (int l = 2; l <= n; l++) {
+            for (int i = 0; i <= n - 1; i++) {
                 int j = l + i - 1;
                 // 先手选择最左边或最右边的分数
                 int left = piles[i] + dp[i + 1][j].sec;
                 int right = piles[j] + dp[i][j - 1].sec;
                 // 状态转移方程
-                if (left > right){
+                if (left > right) {
                     dp[i][j].fir = left;
                     dp[i][j].sec = dp[i + 1][j].fir;
                 } else {
@@ -86,7 +87,6 @@ public class LeetCode0877_StoneGame {
         Pair res = dp[0][n - 1];
         return res.fir - res.sec;
     }
-
 
 
     public static void main(String[] args) {
