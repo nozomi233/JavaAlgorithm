@@ -4,7 +4,7 @@ package main.leetcode;
  * @Author zhulang
  * @Date 2022-02-17
  **/
-public class LeetCode0688_knightProbability {
+public class LeetCode0688_KnightProbability {
     static int[][] dirs = {{-2, -1}, {-2, 1}, {2, -1}, {2, 1}, {-1, -2}, {-1, 2}, {1, -2}, {1, 2}};
 
     public double knightProbability(int n, int k, int row, int column) {
