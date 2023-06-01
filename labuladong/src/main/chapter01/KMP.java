@@ -16,6 +16,7 @@ public class KMP {
     public int search(String txt) {
         // 借助 dp 数组去匹配 txt
         // 需要 O(N) 时间
+        return 0;
     }
 
 }
