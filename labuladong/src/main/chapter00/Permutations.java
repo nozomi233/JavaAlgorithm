@@ -23,7 +23,7 @@ public class Permutations {
 
     public static void dfs(int[] arr, List<Integer> path){
         if (path.size() == arr.length){
-            res.add(path);
+            res.add(new ArrayList<>(path));
             path.forEach(System.out::print);
             System.out.println();
         }
@@ -41,7 +41,7 @@ public class Permutations {
     public static void main(String[] args) {
         int[] arr = new int[]{1,2,3};
         printPermutations(arr);
-        // 为什么res 打印为6个空列表？
+        // 为什么res 打印为6个空列表？ 第26行得用 res.add(new ArrayList<>(path)); 不能 res.add(path);，path是引用型，会变
 //        res.forEach(System.out::print);
 //        System.out.println();
     }
