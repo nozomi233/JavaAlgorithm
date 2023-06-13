@@ -26,6 +26,7 @@ public class Permutations {
             res.add(new ArrayList<>(path));
             path.forEach(System.out::print);
             System.out.println();
+            return;
         }
 
         for (int i : arr){
