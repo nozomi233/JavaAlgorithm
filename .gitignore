@@ -9,6 +9,7 @@
 .gradle
 .idea
 tmp/
+out/
 *.tmp
 *.bak
 *.swp

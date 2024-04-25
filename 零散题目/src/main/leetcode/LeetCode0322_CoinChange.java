@@ -1,10 +1,16 @@
 package main.leetcode;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @Author zhulang
  * @Date 2023-05-10
  **/
 public class LeetCode0322_CoinChange {
+
+    // method1------------------------------------------------------------------------------------
+
     /**
      * 最少几枚硬币凑成amount
      * @param coins
@@ -30,6 +36,8 @@ public class LeetCode0322_CoinChange {
         return res == Integer.MAX_VALUE ? -1 : res;
     }
 
+    // method2------------------------------------------------------------------------------------
+
     public int coinChangeDP(int[] coins, int amount) {
         int[] dp = new int[amount + 1];
 
@@ -45,5 +53,30 @@ public class LeetCode0322_CoinChange {
             }
         }
         return dp[amount] == amount + 1 ? -1 : dp[amount];
+    }
+
+    // method3:回溯------------------------------------------------------------------------------------
+    private int minLen = Integer.MAX_VALUE;
+    private List<Integer> path;
+
+    public int coinChangeRecur(int[] coins, int amount) {
+        // 列表
+        path = new ArrayList<>();
+        process(coins, amount);
+        return minLen == Integer.MAX_VALUE? -1 : minLen;
+    }
+    private void process(int[] coins, int rest){
+        if (rest < 0){
+            return;
+        }
+        if (rest == 0){
+            minLen = Math.min(minLen, path.size());
+            return;
+        }
+        for (int coin : coins){
+            path.add(coin);
+            process(coins, rest - coin);
+            path.remove(path.size() - 1);
+        }
     }
 }
