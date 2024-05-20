@@ -48,4 +48,36 @@ public class LeetCode0146_LRUCache {
             cache.put(key, val);
         }
     }
+
+    class LRUCache2 {
+
+        private LinkedHashMap<Integer, Integer> cache;
+        private final int capacity;
+
+        public LRUCache2(int capacity) {
+            cache = new LinkedHashMap(capacity, 0.75f, true);
+            this.capacity = capacity;
+        }
+
+        public int get(int key) {
+            if(!cache.containsKey(key)){
+                return -1;
+            }
+            return cache.get(key);
+        }
+
+        public void put(int key, int value) {
+            if (cache.containsKey(key)) {
+                // 修改 key 的值
+                cache.put(key, value);
+                return;
+            }
+            if (cache.size() >= this.capacity) {
+                int oldestKey = cache.keySet().iterator().next();
+                cache.remove(oldestKey);
+            }
+            cache.put(key, value);
+        }
+
+    }
 }
