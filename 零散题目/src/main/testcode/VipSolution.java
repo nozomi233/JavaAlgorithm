@@ -1,6 +1,7 @@
-package main.leetcode;
+package main.testcode;
 
-public class Solution {
+// 唯品会
+public class VipSolution {
 
     public void bobSort(int[] arr){
         if (arr == null || arr.length < 2){
@@ -25,7 +26,7 @@ public class Solution {
 
     public static void main(String[] args) {
         int[] arr = new int[]{1,3,7,9,2};
-        Solution s = new Solution();
+        VipSolution s = new VipSolution();
         s.bobSort(arr);
         for (int i = 0; i < arr.length; i++) {
             System.out.println(arr[i]);
